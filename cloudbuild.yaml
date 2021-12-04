@@ -1,7 +1,7 @@
 steps:
 ## Shinkwrap
 - name: 'gcr.io/$PROJECT_ID/faas-cli:latest'
-  args: ['faas-cli', 'template', 'store', 'pull', 'node10-express']
+  args: ['faas-cli', 'template', 'store', 'pull', 'node12-express']
 - name: 'gcr.io/$PROJECT_ID/faas-cli:latest'
   args: ['faas-cli', 'build', '--shrinkwrap']
 ## Build Docker image
