@@ -1,9 +1,9 @@
 steps:
 ## Shinkwrap
 - name: 'gcr.io/$PROJECT_ID/faas-cli:latest-root'
-  args: ['faas-cli', 'template', 'store', 'pull', 'node']
+  args: ['template', 'store', 'pull', 'node']
 - name: 'gcr.io/$PROJECT_ID/faas-cli:latest-root'
-  args: ['faas-cli', 'build', '--shrinkwrap']
+  args: ['build', '--shrinkwrap']
 ## Build Docker image
 - name: 'gcr.io/cloud-builders/docker'
   args: ['build', '-t', 'gcr.io/$PROJECT_ID/timezone-shift:$REVISION_ID', '-t', 'gcr.io/$PROJECT_ID/timezone-shift:latest', '-f' ,'./build/timezone-shift/Dockerfile', './build/timezone-shift/']
