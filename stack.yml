@@ -4,7 +4,7 @@ provider:
 
 functions:
   timezone-shift:
-    lang: node8-express
+    lang: node10-express
     handler: ./timezone-shift
     image: timezone-shift:latest-0.5
     labels:
